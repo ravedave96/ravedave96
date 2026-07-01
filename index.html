@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graber Metall & Hausservice</title>
+    <meta name="description" content="Graber Metall & Hausservice – Handwerk für Haus, Garten und Metallarbeiten.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#1a1a1a',
+              paper: '#f5f2ec',
+              accent: '#d95a1e',
+              accentDark: '#b4471a',
+              muted: '#6b6663'
+            },
+            fontFamily: {
+              display: ['Archivo', 'system-ui', 'sans-serif'],
+              body: ['Inter', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, sans-serif; }
+      .font-display { font-family: 'Archivo', system-ui, sans-serif; }
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+        outline: 2px solid #d95a1e;
+        outline-offset: 3px;
+      }
+      #mobile-menu { display: none; }
+      #mobile-menu.open { display: flex; }
+      .display-huge {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        line-height: 0.95;
+      }
+      .section-label {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+    </style>
+</head>
+<body class="bg-paper text-ink">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-ink text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex justify-between items-center">
+        <a href="#top" class="font-display font-black text-lg tracking-tight uppercase">Graber<span class="text-accent">.</span></a>
+        <nav class="hidden md:flex gap-10 text-sm font-medium uppercase tracking-widest">
+            <a href="#services" class="hover:text-accent transition-colors">Leistungen</a>
+            <a href="#projects" class="hover:text-accent transition-colors">Projekte</a>
+            <a href="#about" class="hover:text-accent transition-colors">Über mich</a>
+            <a href="#contact" class="hover:text-accent transition-colors">Kontakt</a>
+        </nav>
+        <a href="#contact" class="hidden md:inline-block bg-accent hover:bg-accentDark px-6 py-2.5 text-sm font-semibold uppercase tracking-wider transition-colors">Anfragen</a>
+        <button id="menu-toggle" class="md:hidden p-2" aria-label="Menü" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden flex-col bg-ink text-white px-6 pb-6 text-sm uppercase tracking-widest border-t border-white/10">
+        <a href="#services" class="py-4 border-b border-white/10">Leistungen</a>
+        <a href="#projects" class="py-4 border-b border-white/10">Projekte</a>
+        <a href="#about" class="py-4 border-b border-white/10">Über mich</a>
+        <a href="#contact" class="py-4">Kontakt</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative bg-ink text-white pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 items-end">
+        <div class="lg:col-span-8">
+            <p class="section-label text-accent mb-8">Einzelunternehmen für Haus, Garten & Metall</p>
+            <h1 class="display-huge text-6xl md:text-7xl lg:text-8xl">
+                Handwerk,<br>
+                das <span class="text-accent">hält.</span>
+            </h1>
+            <p class="mt-10 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
+                Ein Ansprechpartner für Renovationen, Reparaturen, Metallbau und Gartenarbeiten. Aus einer Hand, mit jahrzehntelanger Praxis.
+            </p>
+        </div>
+        <div class="lg:col-span-4 flex flex-col gap-4">
+            <a href="#contact" class="bg-accent hover:bg-accentDark px-8 py-5 font-display font-semibold uppercase tracking-widest text-sm text-center transition-colors">
+                Projekt besprechen →
+            </a>
+            <a href="#services" class="border border-white/30 hover:border-accent hover:text-accent px-8 py-5 font-display font-semibold uppercase tracking-widest text-sm text-center transition-colors">
+                Leistungen ansehen
+            </a>
+        </div>
+    </div>
+
+    <!-- Info bar -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 mt-20 md:mt-28 pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+            <p class="section-label text-white/50 mb-2">Erfahrung</p>
+            <p class="font-display text-2xl md:text-3xl font-bold">30+ Jahre</p>
+        </div>
+        <div>
+            <p class="section-label text-white/50 mb-2">Ausbildung</p>
+            <p class="font-display text-2xl md:text-3xl font-bold">Landmaschinen&shy;mechaniker</p>
+        </div>
+        <div>
+            <p class="section-label text-white/50 mb-2">Bereiche</p>
+            <p class="font-display text-2xl md:text-3xl font-bold">Haus · Metall · Garten</p>
+        </div>
+        <div>
+            <p class="section-label text-white/50 mb-2">Region</p>
+            <p class="font-display text-2xl md:text-3xl font-bold">Und Umgebung</p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="bg-paper py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-8 mb-16">
+            <div class="lg:col-span-4">
+                <p class="section-label text-accent mb-4">Leistungen</p>
+                <h2 class="display-huge text-5xl md:text-6xl">Was ich für Sie mache.</h2>
+            </div>
+            <div class="lg:col-span-7 lg:col-start-6 flex items-end">
+                <p class="text-lg text-muted leading-relaxed">
+                    Drei Bereiche, in denen ich seit Jahren zu Hause bin. Sie brauchen für Ihr Projekt nur einen Ansprechpartner – von der Beratung bis zur Übergabe.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-px bg-ink/10">
+            <div class="bg-paper p-8 md:p-10">
+                <div class="aspect-[4/3] bg-ink/5 mb-8 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-ink/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-6 9 6M4 10v10h16V10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 20v-7h6v7"/></svg>
+                </div>
+                <p class="section-label text-accent mb-3">01 — Haus</p>
+                <h3 class="font-display text-3xl font-bold mb-5">Renovation & Unterhalt</h3>
+                <ul class="space-y-2 text-muted">
+                    <li>Renovationen und Umbauten</li>
+                    <li>Badezimmermodernisierung</li>
+                    <li>Bodenbeläge</li>
+                    <li>Malerarbeiten</li>
+                    <li>Reparaturen und Unterhalt</li>
+                </ul>
+            </div>
+
+            <div class="bg-paper p-8 md:p-10">
+                <div class="aspect-[4/3] bg-ink/5 mb-8 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-ink/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="7" r="3"/><path stroke-linecap="round" d="M9.5 14.5L14.5 9.5"/></svg>
+                </div>
+                <p class="section-label text-accent mb-3">02 — Metall</p>
+                <h3 class="font-display text-3xl font-bold mb-5">Bau & Sonderanfertigung</h3>
+                <ul class="space-y-2 text-muted">
+                    <li>Individuelle Metallkonstruktionen</li>
+                    <li>Geländer</li>
+                    <li>Schweissarbeiten</li>
+                    <li>Reparaturen</li>
+                    <li>Sonderanfertigungen</li>
+                </ul>
+            </div>
+
+            <div class="bg-paper p-8 md:p-10">
+                <div class="aspect-[4/3] bg-ink/5 mb-8 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-ink/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s-7-5-7-11a7 7 0 0114 0c0 6-7 11-7 11z"/><circle cx="12" cy="11" r="3"/></svg>
+                </div>
+                <p class="section-label text-accent mb-3">03 — Garten</p>
+                <h3 class="font-display text-3xl font-bold mb-5">Gestaltung & Unterhalt</h3>
+                <ul class="space-y-2 text-muted">
+                    <li>Gartenumgestaltung</li>
+                    <li>Holzarbeiten</li>
+                    <li>Hecken- und Strauchschnitt</li>
+                    <li>Gartenprojekte</li>
+                    <li>Allgemeiner Gartenunterhalt</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="bg-ink text-white py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-8 mb-16">
+            <div class="lg:col-span-8">
+                <p class="section-label text-accent mb-4">Ausgewählte Projekte</p>
+                <h2 class="display-huge text-5xl md:text-6xl">Ausgeführte<br>Arbeiten.</h2>
+            </div>
+            <div class="lg:col-span-4 flex items-end">
+                <p class="text-white/70 leading-relaxed">
+                    Jedes Projekt ist einzigartig. Sobald Fotos vorliegen, erscheinen hier Beispiele meiner Arbeit.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div>
+                <div class="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                    <span class="section-label text-white/40">Foto folgt</span>
+                </div>
+                <p class="section-label text-accent mb-1">Haus</p>
+                <h3 class="font-display text-xl font-bold">Badezimmer</h3>
+            </div>
+            <div>
+                <div class="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                    <span class="section-label text-white/40">Foto folgt</span>
+                </div>
+                <p class="section-label text-accent mb-1">Haus</p>
+                <h3 class="font-display text-xl font-bold">Böden</h3>
+            </div>
+            <div>
+                <div class="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                    <span class="section-label text-white/40">Foto folgt</span>
+                </div>
+                <p class="section-label text-accent mb-1">Haus</p>
+                <h3 class="font-display text-xl font-bold">Malerarbeiten</h3>
+            </div>
+            <div>
+                <div class="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                    <span class="section-label text-white/40">Foto folgt</span>
+                </div>
+                <p class="section-label text-accent mb-1">Metall</p>
+                <h3 class="font-display text-xl font-bold">Metallbau</h3>
+            </div>
+            <div>
+                <div class="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                    <span class="section-label text-white/40">Foto folgt</span>
+                </div>
+                <p class="section-label text-accent mb-1">Garten</p>
+                <h3 class="font-display text-xl font-bold">Gartenprojekte</h3>
+            </div>
+            <div>
+                <div class="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                    <span class="section-label text-white/40">Foto folgt</span>
+                </div>
+                <p class="section-label text-accent mb-1">Garten</p>
+                <h3 class="font-display text-xl font-bold">Holzarbeiten</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-paper py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-5">
+                <div class="aspect-[3/4] bg-ink/5 border border-ink/10 flex items-center justify-center">
+                    <span class="section-label text-ink/40">Porträtfoto folgt</span>
+                </div>
+            </div>
+            <div class="lg:col-span-7 flex flex-col justify-center">
+                <p class="section-label text-accent mb-4">Über mich</p>
+                <h2 class="display-huge text-5xl md:text-6xl mb-8">Erfahrung, die man <span class="text-accent">sieht.</span></h2>
+                <div class="space-y-5 text-lg text-muted leading-relaxed">
+                    <p>Als gelernter Landmaschinenmechaniker kenne ich präzises und zuverlässiges Arbeiten von Grund auf. Im Laufe der Jahre habe ich umfangreiche praktische Erfahrungen in den verschiedensten handwerklichen Bereichen gesammelt.</p>
+                    <p>Mein eigenes Haus habe ich selbst renoviert und umgebaut – von Badezimmern über Bodenbeläge bis hin zu Malerarbeiten und allgemeinen Renovationen. Neben Arbeiten rund ums Haus fertige ich individuelle Metallkonstruktionen an und unterstütze Kunden bei Gartenumgestaltungen. Eine absolvierte Forstwart-Schulung ergänzt mein vielseitiges handwerkliches Profil.</p>
+                    <p class="text-ink font-medium">Für mich zählen saubere Arbeit, ehrliche Beratung und Lösungen, die langfristig überzeugen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-accent text-white py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-5">
+                <p class="section-label text-white/70 mb-4">Kontakt</p>
+                <h2 class="display-huge text-5xl md:text-6xl mb-10">Sprechen wir<br>über Ihr Projekt.</h2>
+                <div class="space-y-6">
+                    <div>
+                        <p class="section-label text-white/70 mb-1">Telefon</p>
+                        <a href="tel:+41xxxxxxxxx" class="font-display text-2xl font-bold hover:underline">+41 xx xxx xx xx</a>
+                    </div>
+                    <div>
+                        <p class="section-label text-white/70 mb-1">E-Mail</p>
+                        <a href="mailto:info@graber-metall.ch" class="font-display text-2xl font-bold hover:underline break-all">info@graber-metall.ch</a>
+                    </div>
+                    <div>
+                        <p class="section-label text-white/70 mb-1">Adresse</p>
+                        <p class="font-display text-2xl font-bold">Musterstrasse 1<br>PLZ Ort</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-6 lg:col-start-7">
+                <form action="mailto:info@graber-metall.ch" method="post" enctype="text/plain" class="space-y-6">
+                    <div>
+                        <label for="name" class="section-label text-white/70 mb-2 block">Name</label>
+                        <input id="name" name="Name" type="text" required class="w-full bg-transparent border-b-2 border-white/40 focus:border-white py-3 text-lg outline-none placeholder-white/50">
+                    </div>
+                    <div>
+                        <label for="mail" class="section-label text-white/70 mb-2 block">E-Mail</label>
+                        <input id="mail" name="E-Mail" type="email" required class="w-full bg-transparent border-b-2 border-white/40 focus:border-white py-3 text-lg outline-none placeholder-white/50">
+                    </div>
+                    <div>
+                        <label for="phone" class="section-label text-white/70 mb-2 block">Telefon <span class="normal-case tracking-normal text-xs opacity-70">(optional)</span></label>
+                        <input id="phone" name="Telefon" type="tel" class="w-full bg-transparent border-b-2 border-white/40 focus:border-white py-3 text-lg outline-none placeholder-white/50">
+                    </div>
+                    <div>
+                        <label for="msg" class="section-label text-white/70 mb-2 block">Nachricht</label>
+                        <textarea id="msg" name="Nachricht" rows="4" required class="w-full bg-transparent border-b-2 border-white/40 focus:border-white py-3 text-lg outline-none resize-none placeholder-white/50"></textarea>
+                    </div>
+                    <button type="submit" class="bg-ink hover:bg-black text-white px-10 py-5 font-display font-semibold uppercase tracking-widest text-sm transition-colors">
+                        Anfrage senden →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-white/70 py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-3 gap-8">
+        <div>
+            <p class="font-display font-black text-lg uppercase text-white">Graber<span class="text-accent">.</span></p>
+            <p class="text-sm mt-2">Metall & Hausservice</p>
+        </div>
+        <div class="text-sm">
+            <p class="section-label text-white/50 mb-2">Impressum</p>
+            <p>Graber Metall & Hausservice</p>
+            <p>Musterstrasse 1, PLZ Ort</p>
+            <p>+41 xx xxx xx xx</p>
+            <p>info@graber-metall.ch</p>
+        </div>
+        <div class="text-sm md:text-right self-end">
+            <p>© 2026 Graber Metall & Hausservice</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>
